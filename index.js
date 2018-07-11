@@ -46,6 +46,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //begin CTA
 let ctaImg=document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
 //end CTA
 
 //Nav a 
@@ -79,12 +80,17 @@ let ctaSection = document.querySelector(".cta");
 let ctaText = ctaSection.querySelector(".cta-text h1");
 
 ctaText.innerHTML = `DOM<p> Is</p> Awesome`;
+ctaText.addEventListener("click", function(event){
+ctaText.style.color = "purple";
+ctaText.style.font="Scripting";
+})
+
 
 let ctaBtn = ctaSection.querySelector(".cta-text button");
 ctaBtn.textContent = "Get Started";
 ctaBtn.addEventListener("click", function(event){
   ctaBtn.style.color = "red"; 
-  ctaBtn.textContent ="Changed";
+  ctaBtn.textContent ="Ouch!";
 })
 //end cta text and button
 
